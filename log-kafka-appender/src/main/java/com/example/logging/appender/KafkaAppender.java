@@ -26,8 +26,8 @@ public class KafkaAppender extends AbstractAppender {
             @PluginAttribute("name") String name,
             @PluginElement("Filter") Filter filter,
             @PluginElement("Layout") Layout<? extends Serializable> layout,
-            @PluginElement("bootstrapServers") String bootstrapServer,
-            @PluginElement("topic") String topic
+            @PluginAttribute("bootstrapServers") String bootstrapServer,
+            @PluginAttribute("topic") String topic
             ) {
         return new  KafkaAppender(name, filter, layout, bootstrapServer, topic);
     }
